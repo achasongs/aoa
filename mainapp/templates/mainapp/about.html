@@ -1,0 +1,42 @@
+{% extends "./master2.html" %}
+<!-- {% load static %} -->
+
+
+{% block title %}
+  AoA About
+{% endblock %}
+
+      
+       {% block content %}
+       {% include "./navbar3.html" %}
+
+       <div class="about-us">
+        <h1>Creating Lasting and Unforgettable Memories </h1>
+        <div class="rule"></div>
+        <p>We are passionate about transforming spaces into magical settings that reflect your unique style and vision. From elegant weddings to vibrant parties, we strive to bring your dreams to life through our creative designs and attention to detail. Our team of experienced professionals is dedicated to providing exceptional service and ensuring that every event is a memorable experience for you and your guests. 
+           <br> Let us help you create those special moments that will be cherished forever <br>
+            <span class="span-color">
+                LET'S WORK TOGETHER
+            </span></p>
+       </div>
+
+       <div class="about-image">
+        <img src="{% static 'mainapp/images/img (2).jpg' %}" alt="">
+        </div> 
+
+        <div class="what-we-do">
+            <h1>What We Do</h1>
+            <div class="rule"></div>
+            <p>We specialize in creating unforgettable experiences. From weddings to parties, corporate events to special occasions, we handle all aspects of decoration planning and design. Our talented team of professionals works closely with our clients to understand their vision and bring it to life. We offer a wide range of services, including venue selection, theme development, decor setup, lighting, floral arrangements, and more. Whether you're looking for a chic and elegant affair or a vibrant and whimsical celebration, we've got you covered. Our goal is to create lasting memories and ensure that every detail is taken care of, so you can relax and enjoy the moment. Let us turn your dreams into reality</p>
+           </div>
+
+        <div class="what-we-do">
+            <h1>Our Culture</h1>
+            <div class="rule"></div>
+            <p>We specialize in creating unforgettable experiences. From weddings to parties, corporate events to special occasions, we handle all aspects of decoration planning and design. Our talented team of professionals works closely with our clients to understand their vision and bring it to life. We offer a wide range of services, including venue selection, theme development, decor setup, lighting, floral arrangements, and more. Whether you're looking for a chic and elegant affair or a vibrant and whimsical celebration, we've got you covered. Our goal is to create lasting memories and ensure that every detail is taken care of, so you can relax and enjoy the moment. Let us turn your dreams into reality</p>
+           </div>
+
+
+       
+
+    {% endblock %}

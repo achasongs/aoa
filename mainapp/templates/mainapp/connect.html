@@ -1,0 +1,89 @@
+{% extends "./master.html" %}
+<!-- {% load static %} -->
+
+
+{% block title %}
+  AoA Homepage
+{% endblock %}
+
+       
+       {% block content %}
+       {% include "./navbar2.html" %}
+
+       {% if message_name %}
+       <br><br>
+        <center
+       ><h2>Thanks {{ message_name }}!</h2>
+       <p>We received your email and will respond shortly</p><br><br>
+
+       <small>Redirecting in 7 seconds...</small>
+
+      </center>      
+      <br><br><br>
+     
+      <!-- Refresh the Page -->
+      <script>
+        setTimeout(function() {
+        window.location.href = "{% url 'connect' %}"  
+      }, 7000);  // 7000 milliseconds = 7 seconds
+       </script>
+
+      {% else %}
+       <div class="contact-main-container">
+        
+          <div class="contactform">
+                  <h2>Reach out to us here - {{  message_name  }}</h2>
+              <form action="{% url 'connect' %}" method="POST">
+                  {% csrf_token %}
+                  <input type="text" placeholder="Your full name*" name="name">
+                  <input type="email" placeholder="Your email*" name="email"><br>
+                  <input type="text" placeholder="Your phone number*" name="phone">
+                  <input type="text" placeholder="Your message title*" name="title"><br>
+                  <textarea name="body" placeholder="Enter your message*" id="" cols="30" rows="10"></textarea><br>
+                  <input type="submit" value="Send Message" name="submit">
+              </form>
+          </div>
+
+          <div class="contact-address">
+              <h3>Get Information</h3>
+              <p class="contact-address-para">Our Contact information Details<br/> 
+                and our social media links</p>
+                <div class="maps">
+                  <span><i class="uil uil-map"></i></span>
+                  <p><strong>Office Address</strong><br/>
+                    1201 park street, Fifth Avenue</p> 
+                </div>
+                <div class="maps">
+                  <span><i class="uil uil-calling"></i></span>
+                  <p><strong>Phone Number</strong><br/>
+                    08135567881</p> 
+                </div>
+                <div class="maps">
+                  <span><i class="uil uil-envelope"></i></span>
+                  <p><strong>Send Mail</strong><br/>
+                    alloccasionsaffairs@gmail.com</p> 
+                </div>
+                <div class="maps">
+                  <span><i class="uil uil-server-network"></i></span>
+                  <p><strong>Website</strong><br/>
+                    www.alloccasionaffairs.com</p> 
+                </div>
+
+                <div class="maps social-links">
+                  <span><i class="uil uil-instagram-alt socials"></i>
+                    <i class="uil uil-facebook socials"></i>
+                    <i class="uil uil-youtube socials"></i>
+                    <i class="uil uil-whatsapp-alt socials"></i>
+                  </span>
+                </div>
+          </div>
+          
+       </div>
+       {% endif %}
+
+
+       <div class="contact-main-2">
+
+       </div>
+
+    {% endblock %}

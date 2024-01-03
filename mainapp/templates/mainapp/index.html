@@ -1,0 +1,54 @@
+{% extends "./master.html" %}
+<!-- {% load static %} -->
+
+
+{% block title %}
+  AoA Homepage
+{% endblock %}
+
+       
+       {% block content %}
+       {% include "./navbar.html" %}
+       
+       <div class="header-hero-text">
+            <h1>We bring life and a touch
+                of class to your events<br>
+                <a href="">BOOK US</a>
+            </h1>
+        
+        </div>
+    </header>
+
+        <main>
+            <div class="main-heading">
+                <h1>
+                    "Transforming Spaces, Creating Memories: 
+                    Elevate Your Events with Our Exquisite Decorative 
+                    Touch. <span style="color: rgb(230, 113, 113);">Unforgettable Experiences Await!"</span>
+                </h1>
+            </div>
+
+            <div class="main-img-container">
+                <div class="img-row row1">
+                    <img src="{% static 'mainapp/images/events (1).jpg' %}" alt="">
+                    <div class="label label-1">Classy Services</div>
+                </div>
+                <div class="img-row row2">
+                    <img src="{% static 'mainapp/images/events (2).jpg' %}" alt="">
+                    <div class="label label-2">Attention to details</div>
+                </div>
+                <div class="img-row row3">
+                    <img src="{% static 'mainapp/images/image1.jpg' %}" alt="">
+                    <div class="label label-3">Amazing Delivery</div>
+                </div>
+            
+            </div>
+           
+
+        </main>
+
+        <footer>
+            {% include "./footer.html "%}
+        </footer>         
+    
+        {% endblock %}

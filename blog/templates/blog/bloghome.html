@@ -1,0 +1,19 @@
+{% extends "./master.html"%}
+
+{% block content %}
+{% include "./navbar2.html" %}
+
+<a class="btn btn-primary" href="{% url 'add_post' %}">Add Post</a> <br><br>
+<h1>Post</h1>
+
+<ul>
+{% for post in object_list %}
+<li><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> - {{ post.author.username }}
+    - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
+<br/>
+{{ post.body | slice:":400" }}</li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}

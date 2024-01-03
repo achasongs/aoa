@@ -1,0 +1,17 @@
+{% extends "./master.html"%}
+{% block title %}{{ post.title_tag }}{% endblock %}
+ 
+{% block content %}
+{% include "./navbar2.html" %}
+
+<h1>{{ post.title }}</h1>
+<small>By: {{ post.author.username }}  
+    - <a href="{% url 'update_post' post.pk %}">(Edit)</a></small><br/>
+<hr>
+<br/><br/>
+{{ post.body }}
+
+<br/>
+<a href="{% url 'blog' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}

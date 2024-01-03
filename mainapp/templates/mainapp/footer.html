@@ -1,0 +1,81 @@
+{% extends "./master.html"%}
+<!-- {% load static %} -->
+
+{% block content %}
+
+
+    <div class="footer-container">
+        <h3 class="footer-h3">Subscribe to <span>Our Newsletter</span></h3>
+        <p class="footer-p">No spam message from us, only give you latest offer which is best for you and your business</p>
+
+        <div class="subscribe">
+            {{ sub_name }}
+            <form action="{% url 'home' %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <input type="email" name="email" placeholder="your email address...">
+                </div>
+
+                <div>
+                    <input type="submit" value="Subscribe Now">
+                </div>   
+            </form>
+        </div>
+<!-- Has contacts and links -->
+        <div class="footer-child-container">
+            <div class="row row1">
+                <h4 class="footer-h4">Contact Us</h4>
+                <div>
+                    <p class="footer-p">Themeforest, Envanto HQ
+                    24 Fifth st., Los Angeles, USA</p>
+                </div>
+                <hr>
+                <div>
+                    <p class="footer-p">info@example.com</p>
+                </div>
+                <hr>
+                <div>
+                    <p class="footer-p">Phone: (+01) 123 456 7890
+                        Support: (+01) 123 456 7890</p>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="footer-h4">Our Services</h4>
+                <div>
+                    <a href="" class="footer-p footer-links">Events Decoration</a><br>
+                    <a href="" class="footer-p footer-links">Wedding Decoration</a><br>
+                    <a href="" class="footer-p footer-links">Event Planning</a><br>
+                    <a href="" class="footer-p footer-links">Rental Services</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="footer-h4">FAQ</h4>
+                <div>
+                    <a href="" class="footer-p footer-links">How Can I Set An Event?</a><br>
+                    <a href="" class="footer-p footer-links">What Venues Do You Use?</a><br>
+                    <a href="" class="footer-p footer-links">Event Catalogue?</a><br>
+                    <a href="" class="footer-p footer-links">How much do you charge?</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Has the last footer -->
+        <div class="footer-last-container">
+            <div><h1 class="footer-h4">AOA</h1>
+            </div>
+            <div><h1 class="footer-h4">About Us</h1>
+                <p class="footer-p "> lor harum? Sapiente eius atque commodi odio <br>aperiam facilis magnam numquam dicta!    
+                </p>
+            </div>
+            <div>
+                <i class="fas fa-facebook"></i>
+                <i class="fas fa-twitter"></i>
+                <i class="fas fa-instagram"></i>
+                <i class="fas fa-youtube"></i><br>
+                <small>Copyright © 2023 AOA. All rights reserved</small>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

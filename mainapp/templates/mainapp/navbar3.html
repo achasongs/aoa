@@ -1,0 +1,35 @@
+{% extends "./master.html"%}
+<!-- {% load static %} -->
+
+{% block content %}
+<header class="header-2">
+
+    <nav id="nav">
+        <ul class="sidebar">
+
+            <!-- Navigation Links for Mobile -->
+            <li onclick="hideSidebar()"><a href="#"><img src="{% static 'mainapp/images/closepng.png' %}" alt=""></a></li>
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'blog' %}">BLOG</a></li>
+            <li><a href="{% url 'connect' %}">CONNECT</a></li>  
+        
+        </ul> 
+        <ul>
+              <!-- Navigation Links for Desktop -->
+            <li><a href="#" class="link-color">AllOccasionAffairs</a></li>
+            <li class="hideOnMobile"><a href="{% url 'home' %}" class="link-color">HOME</a></li>
+            <li class="hideOnMobile"><a href="{% url 'about' %}" class="link-color">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="{% url 'blog' %}" class="link-color">BLOG</a></li>
+            <li class="hideOnMobile"><a href="{% url 'connect' %}" class="link-color">CONNECT</a></li>      
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="{% static 'mainapp/images/menupng.png' %}" alt=""></a></li>  
+        </ul>
+    </nav>
+
+    <div class="connect-header-text">
+        <h1>ABOUT US</h1>
+    </div>
+
+</header>
+
+    {% endblock %}
