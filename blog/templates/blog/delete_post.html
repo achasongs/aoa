@@ -1,0 +1,24 @@
+{% extends "./master.html"%}
+{% block title %} Delete blog post {% endblock %}
+
+{% block content %}
+
+<h3>Delete Post... </h3>
+<br><br>
+
+<h3>Delete: {{ post.title }}</h3>
+
+<div class="formgroup m-4">
+<form class="add-form" method="POST" action="">
+    {%  csrf_token %}
+    <div class="add_post_form">
+        <strong>Are you sure?!</strong><br/><br/>
+    </div>
+    <button class="btn btn-danger">Delete Post</button>   
+
+</form>
+</div>
+
+
+
+{% endblock %}
