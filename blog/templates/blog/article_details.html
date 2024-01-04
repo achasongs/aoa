@@ -5,7 +5,7 @@
 {% include "./navbar2.html" %}
 
 <h1>{{ post.title }}</h1>
-<small>By: {{ post.author.username }}  
+<small>By: {{ post.author.username }}- {{  post.post_date }} 
     - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
     <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
 </small><br/>

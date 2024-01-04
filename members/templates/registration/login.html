@@ -1,0 +1,22 @@
+{% extends "./master.html"%}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<h3>Login... </h3>
+<br><br>
+
+<div class="formgroup m-4">
+<form class="add-form" method="POST" action="">
+    {%  csrf_token %}
+    <div class="add_post_form">
+        {{  form.as_p }}
+    </div>
+    <button class="btn btn-primary">Login</button>   
+
+</form>
+</div>
+
+
+
+{% endblock %}
