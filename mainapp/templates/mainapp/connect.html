@@ -16,7 +16,7 @@
        ><h2>Thanks {{ message_name }}!</h2>
        <p>We received your email and will respond shortly</p><br><br>
 
-       <small>Redirecting in 7 seconds...</small>
+       <small>Redirecting ...</small>
 
       </center>      
       <br><br><br>
@@ -25,7 +25,7 @@
       <script>
         setTimeout(function() {
         window.location.href = "{% url 'connect' %}"  
-      }, 7000);  // 7000 milliseconds = 7 seconds
+      }, 5000);  // 7000 milliseconds = 7 seconds
        </script>
 
       {% else %}
@@ -70,10 +70,11 @@
                 </div>
 
                 <div class="maps social-links">
-                  <span><i class="uil uil-instagram-alt socials"></i>
-                    <i class="uil uil-facebook socials"></i>
-                    <i class="uil uil-youtube socials"></i>
-                    <i class="uil uil-whatsapp-alt socials"></i>
+                  <span>
+                    <a href="https://www.instagram.com" target="_blank"><i class="uil uil-instagram-alt socials"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="uil uil-facebook socials"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="uil uil-youtube socials"></i></a>
+                    <a href="https://www.whatsapp.com" target="_blank"><i class="uil uil-whatsapp-alt socials"></i></a>
                   </span>
                 </div>
           </div>
@@ -85,5 +86,9 @@
        <div class="contact-main-2">
 
        </div>
+
+       <footer>
+        {% include "./footer.html "%}
+      </footer> 
 
     {% endblock %}

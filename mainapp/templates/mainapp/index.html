@@ -13,7 +13,8 @@
        <div class="header-hero-text">
             <h1>We bring life and a touch
                 of class to your events<br>
-                <a href="">BOOK US</a>
+                <a href="{% url 'connect' %}">BOOK US</a>
+                <a class="hero-second-btn" style="background-color: rgb(37, 163, 163);" href="https://www.whatsapp.com" target="_blank"><i class="uil uil-whatsapp-alt socials-hero-btn"></i>CHAT</a>
             </h1>
         
         </div>
@@ -43,9 +44,44 @@
                 </div>
             
             </div>
-           
+            <div class="main-img-container">
+                <div class="img-row row1">
+                    <img src="{% static 'mainapp/images/img (1).jpg' %}" alt="">
+                    <div class="label label-1">Classy Services</div>
+                </div>
+                <div class="img-row row2">
+                    <img src="{% static 'mainapp/images/img (2).jpg' %}" alt="">
+                    <div class="label label-2">Attention to details</div>
+                </div>
+                <div class="img-row row3">
+                    <img src="{% static 'mainapp/images/img (3).jpg' %}" alt="">
+                    <div class="label label-3">Amazing Delivery</div>
+                </div>
+            
+            </div>
 
+            <div class="main-img-container">
+                <div class="img-row row1">
+                    <img src="{% static 'mainapp/images/image2.jpg' %}" alt="">
+                    <div class="label label-1">Classy Services</div>
+                </div>
+                <div class="img-row row2">
+                    <img src="{% static 'mainapp/images/hero-decor.jpg' %}" alt="">
+                    <div class="label label-2">Attention to details</div>
+                </div>
+                <div class="img-row row3">
+                    <img src="{% static 'mainapp/images/event.jpg' %}" alt="">
+                    <div class="label label-3">Amazing Delivery</div>
+                </div>
+            
+            </div>
+           
+       
         </main>
+
+        <br><br><br><br><br>
+        <hr style="height: 3px; margin-left: 100px; margin-right: 100px; margin-bottom: 40px; color: grey; ">
+
 
         <footer>
             {% include "./footer.html "%}

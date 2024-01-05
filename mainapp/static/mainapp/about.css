@@ -16,7 +16,7 @@
    body{
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
-      background-color: black;
+      background-color: rgb(19, 6, 41);
       color: #fff;
    }
    .header{
@@ -237,27 +237,13 @@
   
    /* footer styles */
   
-  footer {
-    background: var(--color-black);
-    position: relative;
-    top: 100px;          
+   footer {
+    /* background: #fff; */
+    color: rgb(56, 56, 56);
+    position: relative;         
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
-  }
-  .footer-container{
-    width: 70vw;
-    margin: auto;
-    position: relative;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    /* background-color: red; */
-    /* padding: 50px; */
-  }
-  .footer-container .row1 > div{
-    margin-bottom: 10px;
   }
   
   hr {
@@ -366,15 +352,14 @@
    .footer-last-container{
     width: 100%;
     position: relative;
-    top: 60px;
     display: flex;
     justify-content: center;
     align-items:center;
     flex-wrap: wrap;
     gap: 40px;
+    background-color: #fff;
     /* background-color: red; */
    }
-  
   
   
    /* Connect Page Styling */
@@ -512,8 +497,8 @@
     margin: auto;
     position: relative;
     top: 40px;
-    left: 10px;
-    right: 10px;
+    left: 40px;
+    right: 40px;
     
 
   }
@@ -554,8 +539,9 @@
     margin: auto;
     position: relative;
     top: 100px;
-    left: 10px;
-    right: 10px; 
+    left: 40px;
+    right: 40px;
+    bottom: 40px; 
   }
   .what-we-do h1{
     font-size: 40px;
@@ -565,6 +551,29 @@
     font-size: 23px;
     line-height: 2;
     letter-spacing: 1.5px;
+  }
+  .our-culture {
+    position: relative;
+    top: 150px;
+  }
+
+  .about-img-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    position: relative;
+    top: 120px;
+    bottom: 40px;
+    max-width: 1200px;
+    margin: auto;
+  
+  }
+  
+  .about-img-gallery img {
+    width: 400px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+    object-fit: cover; /* Ensure the image covers the entire container, maintaining aspect ratio */
+    margin: 5px; /* Adjust the margin as needed for spacing between images */
   }
   
   
@@ -667,6 +676,18 @@
    .contactform{
     width: 100%;
    }
+
+   .h1__mobile{
+    font-size: 25px;
+    text-align: left;
+    padding: 10px;
+  }
+  .p.__mobile {
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
   
   }
    @media(max-width: 400px){

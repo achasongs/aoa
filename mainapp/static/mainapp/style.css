@@ -16,6 +16,9 @@
  body{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0;
  }
  .header{
    background-image:   linear-gradient(to bottom, rgba(0, 1, 7, 0.52), 
@@ -120,7 +123,7 @@
    color: #fff;
    position: relative;
    text-align: center;
-   font-size: 50px;
+   font-size: 60px;
  }
  .header-hero-text a{
    color: whitesmoke;
@@ -133,11 +136,18 @@
    top: 15px;
    font-size: 25px;
    border-radius: 8px;
+   transition: all 1s ease-out;
 
  }
  .header-hero-text a:hover{
-   background-color: rgb(246, 174, 174);
+   background-color: rgb(75, 11, 98);
    color: white;
+   display: inline;
+   height: 70px;
+   width: 75px;
+ }
+ .hero-second-btn:hover {
+   opacity: 0.5;
  }
 
 
@@ -236,26 +246,14 @@
  /* footer styles */
 
 footer {
-  background: var(--color-black);
-  position: relative;
-  top: 100px;          
+  /* background: #fff; */
+  color: rgb(56, 56, 56);
+  position: relative;         
   left: 0;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
-}
-.footer-container{
-  width: 70vw;
-  margin: auto;
-  position: relative;
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  color: #fff;
-  /* background-color: red; */
-  /* padding: 50px; */
-}
-.footer-container .row1 > div{
-  margin-bottom: 10px;
+  flex-direction: row;
 }
 
 hr {
@@ -347,30 +345,22 @@ hr {
   opacity: 0.8;
 }
 
- /* Second Footer div */
-
- .footer-child-container{
-  width: 100%;
-  position: relative;
-  top: 40px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
- }
-
- /* Last Footer div */
+ 
 
  .footer-last-container{
   width: 100%;
   position: relative;
   top: 60px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items:center;
   flex-wrap: wrap;
-  gap: 40px;
-  /* background-color: red; */
+  gap: 20px;
+ }
+
+ .footer-about{
+
  }
 
 
@@ -484,6 +474,17 @@ hr {
   font-size: 30px !important;
   transition: all 0.5s ease-in-out;
 }
+.socials2{
+  color: #333 !important;
+  font-size: 30px !important;
+  transition: all 0.5s ease-in-out;
+}
+.socials-hero-btn{
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 30px !important;
+  transition: all 0.5s ease-in-out;
+}
 .socials:hover{
   color: rgb(250, 89, 89) !important;
   font-size: 30px !important;
@@ -531,19 +532,18 @@ hr {
          flex-direction: column;
       }
       footer {
-        background: var(--color-black);
+        background: #fff;
         width: 100%;
-      }
-      .footer-container{
-        width: 90vw;
-        margin: auto;
         position: relative;
-        top: 50px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        color: #fff;
+        top: 40px;
       }
+
+      .footer-last-container{
+        width: 100%;
+        position: relative;
+        left: 20px;
+
+       }
       .subscribe {
         margin-top: 20px;
         padding: 20px 3px;

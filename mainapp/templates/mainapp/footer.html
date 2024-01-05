@@ -4,9 +4,11 @@
 {% block content %}
 
 
-    <div class="footer-container">
-        <h3 class="footer-h3">Subscribe to <span>Our Newsletter</span></h3>
-        <p class="footer-p">No spam message from us, only give you latest offer which is best for you and your business</p>
+    <!-- <div class="footer-container"> -->
+
+        <!-- Subscription field -->
+        <!-- <h3 class="footer-h3">Subscribe to <span>Our Newsletter</span></h3>
+        <p class="footer-p" style="color: black;">No spam message from us, only give you latest offer which is best for you and your business</p>
 
         <div class="subscribe">
             {{ sub_name }}
@@ -20,62 +22,36 @@
                     <input type="submit" value="Subscribe Now">
                 </div>   
             </form>
-        </div>
-<!-- Has contacts and links -->
-        <div class="footer-child-container">
-            <div class="row row1">
-                <h4 class="footer-h4">Contact Us</h4>
-                <div>
-                    <p class="footer-p">Themeforest, Envanto HQ
-                    24 Fifth st., Los Angeles, USA</p>
-                </div>
-                <hr>
-                <div>
-                    <p class="footer-p">info@example.com</p>
-                </div>
-                <hr>
-                <div>
-                    <p class="footer-p">Phone: (+01) 123 456 7890
-                        Support: (+01) 123 456 7890</p>
-                </div>
-            </div>
-            <div class="row">
-                <h4 class="footer-h4">Our Services</h4>
-                <div>
-                    <a href="" class="footer-p footer-links">Events Decoration</a><br>
-                    <a href="" class="footer-p footer-links">Wedding Decoration</a><br>
-                    <a href="" class="footer-p footer-links">Event Planning</a><br>
-                    <a href="" class="footer-p footer-links">Rental Services</a>
-                </div>
-            </div>
-            <div class="row">
-                <h4 class="footer-h4">FAQ</h4>
-                <div>
-                    <a href="" class="footer-p footer-links">How Can I Set An Event?</a><br>
-                    <a href="" class="footer-p footer-links">What Venues Do You Use?</a><br>
-                    <a href="" class="footer-p footer-links">Event Catalogue?</a><br>
-                    <a href="" class="footer-p footer-links">How much do you charge?</a>
-                    
-                </div>
-            </div>
-        </div>
-
+        </div> -->
+       
         <!-- Has the last footer -->
         <div class="footer-last-container">
-            <div><h1 class="footer-h4">AOA</h1>
-            </div>
-            <div><h1 class="footer-h4">About Us</h1>
-                <p class="footer-p "> lor harum? Sapiente eius atque commodi odio <br>aperiam facilis magnam numquam dicta!    
-                </p>
-            </div>
+
+            
+            <div class="footer-about">
+                <div>
+                    <h1 class="footer-h4">AOA</h1>
+                    </div>
+                <a href="{% url 'about' %}"><h1 class="footer-h4" style="color: black; cursor: pointer;">About Us</h1></a>
+                <p class="footer-p" style="color: black;"> We handle all aspects of decoration planning and design. 
+                    <br>From weddings to parties, corporate events to special occasions...  
+                </p>  
             <div>
-                <i class="fas fa-facebook"></i>
-                <i class="fas fa-twitter"></i>
-                <i class="fas fa-instagram"></i>
-                <i class="fas fa-youtube"></i><br>
-                <small>Copyright © 2023 AOA. All rights reserved</small>
-            </div>
+
+                
+                <div class="maps social-links">
+                    <span>
+                    <small>Explore our social media handles...</small><br>
+                     <a href="https://www.instagram.com" target="_blank"><i class="uil uil-instagram-alt socials"></i></a>
+                     <a href="https://www.facebook.com" target="_blank"><i class="uil uil-facebook socials"></i></a>
+                     <a href="https://www.youtube.com" target="_blank"><i class="uil uil-youtube socials"></i></a>
+                     <a href="https://www.whatsapp.com" target="_blank"><i class="uil uil-whatsapp-alt socials"></i></a>
+                    </span>
+                </div>
+                <br>
+                <small class="" style="color: rgb(238, 117, 117);">Copyright © 2024 AOA. All rights reserved</small>
         </div>
-    </div>
+        
+    <!-- </div> -->
 
 {% endblock %}
