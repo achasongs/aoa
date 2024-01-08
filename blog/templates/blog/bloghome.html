@@ -15,7 +15,7 @@
 <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> 
     - <small> 
         {{ post.category }}
-        {{ post.author.username }}
+        - {{ post.author.username }}
         - {{  post.post_date }} </small>
     
     {% if user.is_authenticated %}
