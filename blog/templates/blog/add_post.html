@@ -11,6 +11,7 @@
 <form class="add-form" method="POST" action="">
     {%  csrf_token %}
     <div class="add_post_form">
+        {{  form.media }}
         {{  form.as_p }}
     </div>
     <button class="btn btn-primary">Post</button>   

@@ -4,10 +4,11 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h3>Delete Post... </h3>
-<br><br>
+    {% if user.id == post.author.id %}
+        <h3>Delete Post... </h3>
+        <br><br>
 
-<h3>Delete: {{ post.title }}</h3>
+        <h3>Delete: {{ post.title }}</h3>
 
 
 <div class="formgroup m-4">
@@ -20,6 +21,9 @@
 
 </form>
 </div>
+    {% else %}
+    <p>You are not allowed here... This page is for the admin </p>
+    {% endif %}
 
 {% else %}
 <p>You are not allowed here... This page is for the admin </p>
