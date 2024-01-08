@@ -3,6 +3,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h3>Add Post... </h3>
 <br><br>
 
@@ -17,6 +18,9 @@
 </form>
 </div>
 
+{% else %}
+<p>You are not allowed here... This page is for the admin </p>
 
+{% endif %}
 
 {% endblock %}

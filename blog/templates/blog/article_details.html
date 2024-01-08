@@ -1,17 +1,22 @@
 {% extends "./master.html"%}
 {% block title %}{{ post.title_tag }}{% endblock %}
  
+
 {% block content %}
+
 {% include "./navbar2.html" %}
 
 <h1>{{ post.title }}</h1>
 <small>By: {{ post.author.username }}- {{  post.post_date }} 
-    - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-    <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-</small><br/>
+
+    {% if user.is_authenticated %}
+    <small> - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
+     <a href="{% url 'delete_post' post.pk %}">(Delete)</a></small>
+    {% endif %}
+    <br/>
 <hr>
 <br/><br/>
-{{ post.body }}
+{{ post.body | safe }}
 
 <br/>
 <a href="{% url 'blog' %}" class="btn btn-secondary">Back</a>

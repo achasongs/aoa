@@ -490,6 +490,15 @@ hr {
   font-size: 30px !important;
   transition: all 0.5s ease-in-out;
 }
+.socials-footer{
+  color: rgb(250, 89, 89)!important;
+  font-size: 30px !important;
+  transition: all 0.5s ease-in-out;
+}
+.socials-footer:hover{
+  opacity: 0.8;
+  font-size: 40px !important;
+}
 .socials-hero-btn{
   color: #fff !important;
   font-weight: bold;

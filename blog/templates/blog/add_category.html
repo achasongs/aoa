@@ -1,22 +1,19 @@
 {% extends "./master.html"%}
-{% block title %} Delete blog post {% endblock %}
+{% block title %} Create a new Blog Category {% endblock %}
 
 {% block content %}
 
 {% if user.is_authenticated %}
-<h3>Delete Post... </h3>
+<h3>Add Category... </h3>
 <br><br>
-
-<h3>Delete: {{ post.title }}</h3>
-
 
 <div class="formgroup m-4">
 <form class="add-form" method="POST" action="">
     {%  csrf_token %}
     <div class="add_post_form">
-        <strong>Are you sure?!</strong><br/><br/>
+        {{  form.as_p }}
     </div>
-    <button class="btn btn-danger">Delete Post</button>   
+    <button class="btn btn-primary">Add Category</button>   
 
 </form>
 </div>
@@ -25,6 +22,5 @@
 <p>You are not allowed here... This page is for the admin </p>
 
 {% endif %}
-
 
 {% endblock %}
