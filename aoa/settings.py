@@ -133,9 +133,27 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / 'productionfiles'
 
 STATIC_URL = 'static/'
+MEDIA_URL ='/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
 ]
+
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'Custom',
+#         'toolbar_Custom': [
+#               ['Styles', 'Format', 'FontSize' 'Bold', 'Italic', 'Underline', 'Strike', 'TextColor', 'BGColor', '-',
+#              'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-',
+#              'NumberedList', 'BulletedList', '-',
+#              'Link', 'Unlink', 'Anchor', '-',
+#              'Image', 'Table', 'HorizontalRule', 'SpecialChar', '-',
+#              'Source', 'Maximize'],
+#         ],
+#         'contentsCss': ['mainapp/blog.css'],
+#     },
+# }
 
 
 # Default primary key field type

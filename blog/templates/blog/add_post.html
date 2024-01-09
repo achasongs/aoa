@@ -8,11 +8,13 @@
 <br><br>
 
 <div class="formgroup m-4">
-<form class="add-form" method="POST" action="">
+<form class="add-form" method="POST" enctype="multipart/form-data">
     {%  csrf_token %}
     <div class="add_post_form">
+
         {{  form.media }}
         {{  form.as_p }}
+        
     </div>
     <button class="btn btn-primary">Post</button>   
 
@@ -25,3 +27,7 @@
 {% endif %}
 
 {% endblock %}
+
+<!-- <script>
+    CKEDITOR.replace('text-editor');
+</script> -->
