@@ -1,12 +1,14 @@
 {% extends "./master.html"%}
-{% block title %} Login {% endblock %}
+{% block title %} Admin Login {% endblock %}
 
 {% block content %}
 
-<h3>Login... </h3>
+<div class="login-body">
+
+<h2>Admin Login</h2>
 <br><br>
 
-<div class="formgroup m-4">
+<div class="formgroup login-form m-4">
 <form class="add-form" method="POST" action="">
     {%  csrf_token %}
     <div class="add_post_form">
@@ -16,6 +18,8 @@
     <!-- <p>Haven't registered? click <a href="{% url 'register' %}">here</a> to register an Admin</p>    -->
 
 </form>
+</div>
+
 </div>
 
 

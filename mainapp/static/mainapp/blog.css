@@ -59,7 +59,7 @@ body{
 .blog-listings{
     list-style-type: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .blog-home-image{
@@ -108,5 +108,30 @@ small{
 /* Media Queries */
 
 @media(max-width: 768px){
-    
+    .blog-listings-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blog-listings-container img{
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .blog-home-image{
+        width: 100%;
+    }
+    .blog-listings{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .blog-home-texts{
+        max-width: 100%;
+        margin: auto;
+    }
 }

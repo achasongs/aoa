@@ -9,13 +9,20 @@
 
             <!-- Navigation Links for Mobile -->
             <li onclick="hideSidebar()"><a href="#"><img src="{% static 'mainapp/images/closepng.png' %}" alt=""></a></li>
-            <li><a href="{% url 'home' %}">HOME</a></li>
-            <li><a href="{% url 'about' %}">ABOUT</a></li>
-            <li><a href="{% url 'blog' %}">BLOG</a></li>
-            <li><a href="{% url 'connect' %}">CONNECT</a></li>
-            <li><a href="{% url 'login' %}">LOGIN</a></li>  
-            <li><a href="{% url 'logout' %}">LOGOUT</a></li>   
-        
+              <li><a href="#" class="link-color">AllOccasionAffairs</a></li>
+              <li><a href="{% url 'home' %}" class="link-color">HOME</a></li>
+              <li><a href="{% url 'about' %}" class="link-color">ABOUT</a></li>
+              <li><a href="{% url 'blog' %}" class="link-color">BLOG</a></li>
+              <li><a href="{% url 'connect' %}" class="link-color">CONNECT</a></li>      
+           
+              {% if user.is_authenticated %}         
+              <li><a href="{% url 'add_category' %}" class="link-color">ADD CATEGORY</a></li>  
+              <li><a href="{% url 'register' %}" class="link-color">REGISTER</a></li> 
+              <li><a href="{% url 'logout' %}" class="link-color">LOGOUT</a></li>
+              {% else %}
+              <li><a href="{% url 'login' %}" class="link-color">LOGIN</a></li>
+              {% endif %}  
+          
         </ul> 
         <ul>
               <!-- Navigation Links for Desktop -->
@@ -31,15 +38,6 @@
               <li class="hideOnMobile"><a href="{% url 'register' %}" class="link-color">REGISTER</a></li> 
               <li class="hideOnMobile"><a href="{% url 'logout' %}" class="link-color">LOGOUT</a></li>  
 
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CATEGORIES
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                </ul>
-              </li> -->
               {% else %}
 
               
@@ -47,9 +45,6 @@
               {% endif %}
 
               <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="{% static 'mainapp/images/menupng.png' %}" alt=""></a></li>
-              
-                  
-                 
             
         </ul>
     </nav>
