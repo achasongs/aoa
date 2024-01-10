@@ -103,6 +103,31 @@ small{
 }
 
 
+.add-post-body{
+    background: aliceblue;
+    max-width: 1200px;
+    height: auto;
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 15px;
+
+}
+.add-post-body h2{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.add-form{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.delete-page{
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 30px;
+}
+
+
 
 
 /* Media Queries */

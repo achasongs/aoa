@@ -3,18 +3,19 @@
 
 {% block content %}
 
+<div class="delete-page">
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-        <h3>Delete Post... </h3>
+        <h3 class="text-danger">Delete Post... </h3>
         <br><br>
 
         <h3>Delete: {{ post.title }}</h3>
 
 
-<div class="formgroup m-4">
-<form class="add-form" method="POST" action="">
+<div class="formgroup">
+<form class="" method="POST" action="">
     {%  csrf_token %}
-    <div class="add_post_form">
+    <div class="">
         <strong>Are you sure?!</strong><br/><br/>
     </div>
     <button class="btn btn-danger">Delete Post</button>   
@@ -29,6 +30,8 @@
 <p>You are not allowed here... This page is for the admin </p>
 
 {% endif %}
+
+</div>
 
 
 {% endblock %}

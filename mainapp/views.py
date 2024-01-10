@@ -41,25 +41,25 @@ def connect(request):
   
 
   
-def subscriber(request):
+# def subscriber(request):
   
-  if request.method == "POST":
-    sub_email = request.POST['email']
-    sub_email.save()
+#   if request.method == "POST":
+#     sub_email = request.POST['email']
+#     sub_email.save()
 
-    # Send Email
-    send_mail(
-       'AOA',    # subject
-       'Thank you for Subscribing!\n We will regularly keep you informed on our services',      # message
-       sub_email,
-      ['sub_email'],
-        fail_silently=False   
-    )
+#     # Send Email
+#     send_mail(
+#        'AOA',    # subject
+#        'Thank you for Subscribing!\n We will regularly keep you informed on our services',      # message
+#        sub_email,
+#       ['sub_email'],
+#         fail_silently=False   
+#     )
 
-    return render(request, 'mainapp/index.html', {
-      'sub_email': sub_email
-    })
+#     return render(request, 'mainapp/index.html', {
+#       'sub_email': sub_email
+#     })
 
 
-  else:
-    return render(request, 'mainapp/index.html', {})
+#   else:
+#     return render(request, 'mainapp/index.html', {})

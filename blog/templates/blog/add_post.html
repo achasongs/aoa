@@ -3,11 +3,13 @@
 
 {% block content %}
 
+<div class="add-post-body">
 {% if user.is_authenticated %}
-<h3>Add Post... </h3>
+
+<h2>Add Blog Post </h2>
 <br><br>
 
-<div class="formgroup m-4">
+<div class="formgroup add-post-formbox">
 <form class="add-form" method="POST" enctype="multipart/form-data">
     {%  csrf_token %}
     <div class="add_post_form">
@@ -24,7 +26,9 @@
 {% else %}
 <p>You are not allowed here... This page is for the admin </p>
 
+
 {% endif %}
+</div>
 
 {% endblock %}
 

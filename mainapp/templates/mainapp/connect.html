@@ -25,7 +25,7 @@
       <script>
         setTimeout(function() {
         window.location.href = "{% url 'connect' %}"  
-      }, 5000);  // 7000 milliseconds = 7 seconds
+      }, 5000);  // 5000 milliseconds = 5 seconds
        </script>
 
       {% else %}
@@ -36,12 +36,12 @@
                   <p>Your message will receive a quick response</p>
               <form action="{% url 'connect' %}" method="POST">
                   {% csrf_token %}
-                  <input type="text" placeholder="Your full name*" name="name">
-                  <input type="email" placeholder="Your email*" name="email"><br>
-                  <input type="text" placeholder="Your phone number*" name="phone">
-                  <input type="text" placeholder="Your message title*" name="title"><br>
-                  <textarea name="body" placeholder="Enter your message*" id="" cols="30" rows="10"></textarea><br>
-                  <input type="submit" value="Send Message" name="submit">
+                  <input type="text" placeholder="Your full name*" name="name" required="required">
+                  <input type="email" placeholder="Your email*" name="email" required="required"><br>
+                  <input type="text" placeholder="Your phone number*" name="phone" required="required">
+                  <input type="text" placeholder="Your message title*" name="title" required="required"><br>
+                  <textarea name="body" placeholder="Enter your message*" id="" cols="30" rows="10" required="required"></textarea><br>
+                  <input type="submit" value="Send Message" name="submit" required="required">
               </form>
           </div>
 
