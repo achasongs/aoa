@@ -35,7 +35,7 @@ EMAIL_HOST_PASSWORD = 'zzfvjgnwispvzwdu'
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
