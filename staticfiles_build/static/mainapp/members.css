@@ -1,0 +1,38 @@
+.reg-body{
+    background: aliceblue;
+    max-width: 800px;
+    height: auto;
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 15px;
+
+}
+.reg-body h2{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.reg-form{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.login-body{
+    background: aliceblue;
+    max-width: 700px;
+    height: auto;
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 15px;
+
+}
+.login-body h2{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.login-form{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}

@@ -1,0 +1,162 @@
+a{
+    text-decoration: none;
+}
+body{
+    color: rgb(5, 5, 32);
+}
+
+
+.post-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+
+.main-post{
+    width: 100%;
+    line-height: 1.5;
+}
+.main-post h1{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.main-post .subtitle-tags{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgb(5, 5, 58);
+    line-height: 1.5;
+}
+
+.main-post img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#article-body{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif !important;
+    color: red; 
+}
+
+
+/* Blog Home */
+
+.post-container-home {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+.blog-listings{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.blog-home-image{
+    width: 30%;
+}
+.blog-home-text{
+    width: auto;
+}
+
+.blog-home-text h1{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.blog-listings-container img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.blog-listings-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+small{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgb(5, 5, 58);
+    line-height: 1.5;
+}
+.blog-home-body {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgb(5, 5, 58);
+    line-height: 1.5;
+}
+
+
+.add-post-body{
+    background: aliceblue;
+    max-width: 1200px;
+    height: auto;
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 15px;
+
+}
+.add-post-body h2{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.add-form{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.delete-page{
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 30px;
+}
+
+
+
+
+/* Media Queries */
+
+@media(max-width: 768px){
+    .blog-listings-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blog-listings-container img{
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .blog-home-image{
+        width: 100%;
+    }
+    .blog-listings{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .blog-home-texts{
+        max-width: 100%;
+        margin: auto;
+    }
+}
